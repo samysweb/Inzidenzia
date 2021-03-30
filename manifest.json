@@ -1,0 +1,18 @@
+{
+
+	"manifest_version": 2,
+	"name": "Inzidenzia",
+	"version": "0.1",
+  
+	"description": "Ersetzt Sätze wie von \"Unabhängig von der Inzidenz\" oder \"Unabhängig vom Inzidenzwert\" durch \"Unabhängig vom gesunden Menschenverstand\"",
+  
+	"icons": {},
+  
+	"content_scripts": [
+	  {
+		"matches": ["<all_urls>"],
+		"js": ["inzidenzia.js"]
+	  }
+	]
+  
+  }
