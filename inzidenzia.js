@@ -1,3 +1,11 @@
+
+const toReplaceList = [
+	"Unabhängig von der (Wochen)?(7[ -]Tage[ -])?Inzidenz",
+	"Unabhängig vom Inzidenzwert",
+	"Unabhängig von Inzidenzwerten", 
+	"Unabhängig von Inzidenz",
+]
+
 function replaceTextOnPage(from, to){
 	var nodes = getAllTextNodes();
 	for(var i = 0; i < nodes.length; i++){
@@ -29,9 +37,7 @@ function replaceTextOnPage(from, to){
 
 function doReplacement() {
 	console.log("Replacement")
-	replaceTextOnPage(["Unabhängig von der (Wochen)?(7[ -]Tage[ -])?Inzidenz",
-	"Unabhängig vom Inzidenzwert",
-	"Unabhängig von Inzidenzwerten", "Unabhängig von Inzidenz"],"Unabhängig vom gesunden Menschenverstand")
+	replaceTextOnPage(toReplaceList,"Unabhängig vom gesunden Menschenverstand")
 }
 
 //window.setInterval(function() {doReplacement()}, 1000)
